@@ -1,0 +1,38 @@
+.main-container{
+    display: flex;
+    align-items: center;
+}
+.todo-container{
+    display: flex;
+    background-color: #AB7BDF ;
+    margin-left: 300px;
+    margin-top: 50px;
+    padding: 50px;
+    width: 800px;
+    height:500px
+}
+.side-bar{
+    background-color:#d1749a ;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu{
+   
+    margin: 10px;
+}
+
+.main-content{
+    margin-left: 50px;
+}
+
+.todo-list{  
+    display: flex;
+    background-color:#037FFE ;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    width: 400px;
+    justify-content: space-between;
+}
+
