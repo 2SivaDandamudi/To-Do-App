@@ -73,12 +73,18 @@ function renderTodoList(){
         const edit = document.createElement('button')
         edit.classList.add('edit')
         edit.textContent = 'Edit'
+        edit.addEventListener('click', editTask)
+
         const done = document.createElement('button')
         done.classList.add('done')
         done.textContent = 'Done'
+
         const deletebtn1 = document.createElement('button')
         deletebtn1.classList.add('delete')
         deletebtn1.textContent = 'Delete'
+        deletebtn1.addEventListener('click', deleteTask)
+        deletebtn1.taskId = todoListArray[index].taskId
+
         buttons.appendChild(edit)
         buttons.appendChild(done)
         buttons.appendChild(deletebtn1)
@@ -86,4 +92,15 @@ function renderTodoList(){
 // appending everything
         content.appendChild(dynamicList)
     }
+}
+
+function deleteTask (event ) {
+
+    const index = todoListArray.findIndex(m=>m.taskId == event.target.taskId)
+    todoListArray.splice(index,1)
+    renderTodoList()
+}
+
+function editTask (event) {
+
 }
